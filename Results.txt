@@ -1,0 +1,4 @@
+Species	TotalGenes	TotalTranscripts	TranscriptsPerGene	GenesWith1Transcript	GenesWith2OrMoreTranscripts	MaxNumberOfTranscriptsPerGene	GenomeSize(Mb)	GeneDensity(genes/Mb)
+C.elegans	20350	31562	1.55096	15000	5350	83	100.273	202.946
+D.melanogaster	13900	30343	2.18295	6921	6979	75	137.548	101.056
+H.sapiens	19919	80008	4.01667	4748	14993	63	3087.93	6.4506

@@ -1,0 +1,99 @@
+Take-home Exam1
+
+You are interested in comparing genome architecture between species.
+You decide to analyze GFF3 files to understand the extent of alternative
+splicing and gene density of PROTEIN-CODING NUCLEAR genes in 3 species:
+C.elegans, D.melanogaster and H.sapiens.
+
+Write a script that generates Results.txt output file with the
+following information for each species:
+
+1. Species name
+2. Total number of genes
+3. Total number of transcripts
+4. Average number of transcripts per gene
+5. Total number of genes with 1 transcript
+6. Total number of genes with >1 transcripts
+7. Maximum number of transcripts per gene
+8. Size of NUCLEAR genome in megabases (1Mb=1000000 bp)
+9. Gene density (genes/Mb)
+
+Here is the format of tab-delimited Results.txt.
+Your Results.txt should have data for every field.
+--------------
+Species	TotalGenes	TotalTranscripts	TranscriptsPerGene	GenesWith1Transcript	GenesWith2OrMoreTranscripts	MaxNumberOfTranscriptsPerGene	GenomeSize(Mb)	GeneDensity(genes/Mb)
+C.elegans	
+D.melanogaster	
+H.sapiens	
+--------------
+
+
+Further instructions:
+1. Name your script GFF3analysis_YourFirstName_YourLastName.sh
+2. Your script should run using the following command:
+   ./GFF3analysis_YourFirstName_YourLastName.sh
+3. Here is the outline of your script:
+------------------------
+#!/bin/bash
+
+#Description
+#Author
+#Usage
+
+#download .gff3 files
+
+curl -o C.elegans.gff3.gz ftp://ftp.ensemblgenomes.org/pub/metazoa/release-34/gff3/caenorhabditis_elegans/Caenorhabditis_elegans.WBcel235.34.gff3.gz
+curl -o D.melanogaster.gff3.gz ftp://ftp.ensemblgenomes.org/pub/metazoa/release-34/gff3/drosophila_melanogaster/Drosophila_melanogaster.BDGP6.34.chr.gff3.gz
+curl -o H.sapiens.gff3.gz ftp://ftp.ensembl.org/pub/release-87/gff3/homo_sapiens/Homo_sapiens.GRCh38.87.chr.gff3.gz
+
+#gunzip .gff3 files
+
+#make header for Results.txt
+
+#start for loop
+
+	#get species name
+	
+	#get total genes
+	
+	#get total transcripts
+	
+	#get transcripts/gene
+	
+	#get gene count for genes with single transcript
+	
+	#get gene count for genes with more than 1 transcripts
+	
+	#get maximum number of transcripts/gene
+	
+	#get genome size
+	
+	#get gene density
+	
+	#write results to Results.txt
+	
+	#remove intermediate files
+	
+#end for loop
+--------------------------
+
+4. Undergraduate students: you must provide answers to Q1-7
+   in your Results.txt to get full credit. You get extra 10 points
+   if your answer Q8-9.
+   Graduate students: you must provide answers to Q1-9 to get
+   full credit.
+
+5. Hints: 1. use AWK to do arithmetic
+   2. Use `uniq -c` command 
+   3. Graduate students: learn how to use AWK to calculate 
+   column sums. Ex: awk '{sum=sum+$1}END{print sum}'
+
+6. You can run your script from TACC or on your local machine.
+
+7. Submit 2 files to Blackboard by 11:59 pm on March 24(Friday).
+   GFF3analysis_YourFirstName_YourLastName.sh
+   Results.txt
+
+ 
+
+
